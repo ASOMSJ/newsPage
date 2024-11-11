@@ -165,3 +165,11 @@
         font-size: 22px;
     }
 }
+
+.related-news{
+    .button {
+        @include button($main-color, $white-color, $main-color);
+       margin-top: 25px;
+        font-size: 22px;
+    }
+}
