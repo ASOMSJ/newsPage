@@ -121,21 +121,24 @@
 
         }
 
-        &-card{
+        &-card {
             margin-top: 25px;
-            .user-photo{
-                img{
+
+            .user-photo {
+                img {
                     clip-path: circle();
                 }
             }
-            .comment-text{
+
+            .comment-text {
                 padding: 20px;
                 margin-top: 15px;
                 margin-right: -15px;
                 background-color: $light-gray;
                 border-radius: 20px;
                 position: relative;
-                &::after{
+
+                &::after {
                     content: ' ';
                     position: absolute;
                     height: 20px;
@@ -146,13 +149,14 @@
                     transform: rotate(45deg)
                 }
 
-                span{
+                span {
                     font-size: 18px;
                     font-weight: bold;
                     margin-bottom: 25px;
 
                 }
-                p{
+
+                p {
                     font-size: 18px;
                 }
             }
@@ -166,10 +170,72 @@
     }
 }
 
-.related-news{
+.related-news {
     .button {
         @include button($main-color, $white-color, $main-color);
-       margin-top: 25px;
+        margin-top: 25px;
         font-size: 22px;
     }
+}
+
+.most-reading {
+    &-article {
+        position: relative;
+        margin-top: 25px;
+    }
+
+    &-text {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 10px;
+        background-color: rgba($color: #000000, $alpha: 0.5);
+        color: $white-color;
+
+        h4.article-title {
+            font-size: 20px;
+            display: block;
+            color: $white-color;
+        }
+    }
+}
+
+@media (max-width:1200px) {
+    .most-reading {
+        &-text {
+            h4.article-title {
+                font-size: 16px;
+
+            }
+        }
+    }
+
+}
+
+@media (max-width:767px) {
+    .article-main {
+        .article-body {
+            .suggested-stories {
+                .story-card {
+                    padding-bottom: 60px;
+
+                    p {
+                        margin: 30px auto 50px;
+                    }
+                }
+
+            }
+        }
+        iframe{
+            width: 480px;
+            height: 260px;
+        }
+
+        .most-reading {
+            &-text {
+               width: 100%;
+            }
+        }
+    }
+
 }
