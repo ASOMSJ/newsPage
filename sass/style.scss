@@ -48,6 +48,11 @@ img {
     @include section-title($main-color, $black-color);
 }
 
+.small-navbar{
+    padding: 0px !important;
+    transition: all .5s;
+}
+
 header {
     .navbar {
         padding: 10px;

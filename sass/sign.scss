@@ -1,0 +1,34 @@
+@import './variable';
+@import './mixins';
+
+form {
+    .button {
+        @include button($white-color, $main-color, $main-color);
+        font-size: 22px;
+
+    }
+}
+
+a.ms-3 {
+    color: $main-color;
+}
+
+.social-media-login {
+    .login-button {
+        color: $main-color;
+        margin-right: 20px;
+        margin-top: 10px;
+        font-size: 25px;
+
+        &:hover {
+            color: rgba($color: $main-color, $alpha: 0.5);
+        }
+    }
+}
+
+@media (max-width:992px) {
+    .vh-100 {
+        height: 100% !important;
+    }
+
+}
